@@ -362,10 +362,9 @@ def esferaBloch(ket):
     for i in range(len(ket)):
         lista.append(car_a_pol(normaKet[i]))
     a = lista[1][1]
-    vCos = math.acos(lista[0][0])
-    vSen = math.asin(lista[1][0])
-    newLista.append((vCos,0))
-    newLista.append((vSen,a-lista[0][1]))
+    #vCos = math.acos(lista[0][0])
+    #newLista.append((vCos,0))
+    newLista.append((math.atan2(lista[1][0],lista[0][0]),a-lista[0][1]))
     return newLista
 
     
